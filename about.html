@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Collage</title>
+    <link rel="stylesheet" href="C:\class\education\edu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="edu.html"><img src="./logo 1"></a>
+            <div class="nav-links" id="navlinks">
+                <!-- <i class="fa fa-times" onclick="hidemenu()"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#1f1f1f" onclick="hidemenu()">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+                </i>
+                <ul>
+                    <li><a href="edu.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="Course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <!-- <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">COURSE</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li> -->
+                </ul>
+
+            </div>
+            <!-- <i class="fa fa-bars" onclick="showmenu()"></i> -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"
+                onclick="showmenu()">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </nav>
+
+
+        <h1>About Us</h1>
+    </section>
+    <!-- --------about us content---------- -->
+
+    <section class="About-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the worls's largest <br>Univarsity</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam voluptatibus quisquam fugit non
+                    neque ipsum in, cum excepturi. Cum, natus ut asperiores dignissimos voluptatibus dolores. Iure
+                    laudantium eaque vel, sequi labore voluptate delectus officiis nisi quidem maiores minus reiciendis,
+                    magni praesentium esse alias repellat consequuntur unde obcaecati. Sapiente, itaque!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex totam voluptatibus quisquam fugit non
+                    neque ipsum in, cum excepturi. Cum, natus ut asperiores dignissimos voluptatibus dolores. Iure
+                    laudantium eaque vel, sequi labore voluptate delectus officiis nisi quidem maiores minus reiciendis,
+                    magni praesentium esse alias repellat consequuntur unde obcaecati. Sapiente, itaque!</p>
+                    <a href="" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+              <img src="about us.avif">
+            </div>
+        </div>
+
+    </section>
+<!-- ------our part------ -->
+
+<div class="testimonial-section">
+  <h2>What Parents Say</h2>
+  <hr>
+  <p class="quote" id="quote">
+    “Rerspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...”
+  </p>
+  <p class="author" id="author">Alivin Corondo</p>
+  <p class="role" id="role">Developer</p>
+  <div class="avatars">
+    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1" class="active" onclick="showTestimonial(0)">
+    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User 2" onclick="showTestimonial(1)">
+    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User 3" onclick="showTestimonial(2)">
+  </div>
+</div>
+
+<script>
+  const testimonials = [
+    {
+      quote: "Rerspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...",
+      author: "Alivin Corondo",
+      role: "Developer"
+    },
+    {
+      quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt...",
+      author: "Sarah Thompson",
+      role: "Designer"
+    },
+    {
+      quote: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain...",
+      author: "David Kim",
+      role: "Engineer"
+    }
+  ];
+
+  function showTestimonial(index) {
+    document.getElementById('quote').textContent = testimonials[index].quote;
+    document.getElementById('author').textContent = testimonials[index].author;
+    document.getElementById('role').textContent = testimonials[index].role;
+
+    // Toggle active avatar
+    const avatars = document.querySelectorAll('.avatars img');
+    avatars.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+  }
+</script>
+
+    <!-- -----footer---- -->
+    <!-- <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eveniet dolore
+            consequatur cumque. quis explicabo laborum officiis soluta, <br>ex ullam corporis, necessitatibus
+            quo.consequatur cumque. quis explicabo laborum officiis soluta, ex ullam corporis, necessitatibus
+            quo.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <p>Made with <i class="fa-regular fa-heart"></i> by Easy Tutorials </p>
+
+
+
+    </section> -->
+
+    <br>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <!-- Logo and Social -->
+    <div class="footer-section logo-social">
+      <h2 class="logo">E-learning<span class="dot"></span></h2>
+      <div class="social-icons">
+         <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+       <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-section">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Mentor</a></li>
+        <li><a href="#">Group</a></li>
+        <li><a href="#">Testimonial</a></li>
+        <li><a href="#">Docs</a></li>
+      </ul>
+    </div>
+
+    <!-- Other -->
+    <div class="footer-section">
+      <h3>Other</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact-info">
+      <p><span class="icon">📍</span> 0, Pollachi Palghat Road,
+Pollachi, Tamil Nadu 642001</p>
+      <p><span class="icon">📞</span> +99 1234567891</p>
+      <p><span class="icon">📧</span> info@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom">
+    <p>@2025 Agency. All Rights Reserved by <a href="#">education.com</a></p>
+    <p>
+      <a href="#">Privacy policy</a> | 
+      <a href="#">Terms & conditions</a> | 
+      Distributed by ThemeWagon
+    </p>
+  </div>
+</footer>
+</body>
